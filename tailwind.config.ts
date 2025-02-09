@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import colors from "tailwindcss/colors";
 
 export default {
   content: [
@@ -9,8 +10,27 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Standard colors
+        primary: colors.indigo,
+        secondary: colors.pink,
+        success: colors.green,
+        warning: colors.amber,
+        error: colors.red,
+        // Custom colors and hyperlink color
         background: "var(--background)",
         foreground: "var(--foreground)",
+        hyperlink: colors.blue["600"],
+      },
+      container: {
+        center: true,
+        padding: "2rem",
+        screens: {
+          sm: "100%",
+          md: "100%",
+          lg: "1024px",
+          xl: "1280px",
+          "2xl": "1536px",
+        },
       },
     },
   },
