@@ -1,7 +1,5 @@
 import SubmitButton from "../../components/SubmitButton";
 
-
-
 export default function UseFormStatusPage() {
 
   async function wait(ms: number) {

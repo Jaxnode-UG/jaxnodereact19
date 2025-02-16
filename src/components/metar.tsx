@@ -8,7 +8,6 @@ interface MetarProps {
 export default function metar({ wxdata }: MetarProps) {
   console.log('Where am I being rendered?');
   return (<div>
-    
     <section className="bg-white shadow-md rounded-lg p-6 mt-4">
       <div className="flex items-center justify-between">
         <h2 className="text-2xl font-semibold">METAR Information</h2>
