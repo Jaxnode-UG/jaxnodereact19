@@ -8,7 +8,7 @@ export default function Home() {
       <p><Link href="rscs" className="text-hyperlink">React Server Components</Link></p>
       <p><Link href="classic" className="text-hyperlink">Classic Counter</Link></p>
       <p><Link href="action" className="text-hyperlink">Action and useTransition</Link></p>
-      <p><Link href="useoptomistic" className="text-hyperlink">useOptomistic</Link></p>
+      <p><Link href="useoptimistic" className="text-hyperlink">useOptimistic</Link></p>
       <p><Link href="useactionstate" className="text-hyperlink">useActionState</Link></p>
       <p><Link href="useformstatus" className="text-hyperlink">useFormStatus</Link></p>
       <p><Link href="metadata" className="text-hyperlink">Metadata example</Link></p>
