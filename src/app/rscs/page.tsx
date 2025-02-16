@@ -10,8 +10,11 @@ async function getData(): Promise<Metar[]> {
 
 export default async function ReactServerComponents() {
   const data = await getData();
-  console.log(data);
+
   return (
-    <MetarComponent wxdata={data[0]} />
+    <div className="container mx-auto">
+      <h1 className="text-3xl font-bold">React Server Component Example</h1>
+      <MetarComponent wxdata={data[0]} />
+    </div>
   );
 }

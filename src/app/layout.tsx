@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <div className="bg-gray-100 text-gray-900">
           <header className="bg-gray-800 text-white">
-            <div className="container mx-auto">
+            <div className="container mx-auto py-6">
               <Link href="/">
                 <Image src="/jaxnode.png" alt="JaxNode Logo" width="120" height="12" className="mb-6" />
               </Link>
@@ -40,7 +40,7 @@ export default function RootLayout({
             </div>
           </header>
         </div>
-        <div className="container mx-auto">
+        <div className="pt-6">
           {children}
         </div>
         

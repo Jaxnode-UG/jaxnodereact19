@@ -1,12 +1,14 @@
-import Metar from '../types/metar';
+
+import type { Metar } from '../types/metar';
 
 interface MetarProps {
   wxdata: Metar;
 }
 
 export default function metar({ wxdata }: MetarProps) {
-  return (<div className="container mx-auto">
-    <h1 className="text-3xl font-bold">React Server Component Example</h1>
+  console.log('Where am I being rendered?');
+  return (<div>
+    
     <section className="bg-white shadow-md rounded-lg p-6 mt-4">
       <div className="flex items-center justify-between">
         <h2 className="text-2xl font-semibold">METAR Information</h2>
