@@ -14,7 +14,7 @@ export default function ThreadWrapper() {
 }
 
 interface ThreadProps {
-  readonly messages: { readonly text: string; readonly sending: boolean }[];
+  readonly messages: { readonly text: string; readonly sending: boolean, readonly key: number }[];
   readonly sendMessage: (formData: FormData) => Promise<void>;
 }
 
@@ -31,15 +31,16 @@ function Thread({ messages, sendMessage }: ThreadProps) {
       ...state,
       {
         text: newMessage as string,
-        sending: true
+        sending: true,
+        key: state.length + 1
       }
     ]
   );
 
   return (
     <>
-      {optimisticMessages.map((message, index) => (
-        <div key={index}>
+      {optimisticMessages.map((message) => (
+        <div key={message.key}>
           {message.text}
           {!!message.sending && <small> (Sending...)</small>}
         </div>

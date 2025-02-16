@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Image from 'next/image';
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,21 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="bg-gray-100 text-gray-900">
+          <header className="bg-gray-800 text-white">
+            <div className="container mx-auto">
+              <Link href="/">
+                <Image src="/jaxnode.png" alt="JaxNode Logo" width="120" height="12" className="mb-6" />
+              </Link>
+              
+              <h1 className="text-3xl font-bold">React 19 examples</h1>
+            </div>
+          </header>
+        </div>
+        <div className="container mx-auto">
+          {children}
+        </div>
+        
       </body>
     </html>
   );

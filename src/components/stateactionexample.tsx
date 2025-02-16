@@ -11,7 +11,11 @@ export default function StatefulForm() {
   return (
     <form>
       <p>{state}</p>
-      <button formAction={formAction} className="py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-blue-500 hover:bg-blue-700 text-white">Increment</button>
+      <button 
+        formAction={formAction} 
+        className="py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-blue-500 hover:bg-blue-700 text-white">
+          Increment
+      </button>
     </form>
   )
 }

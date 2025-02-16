@@ -26,8 +26,20 @@ export default function UpdateName() {
   return (    
     <form action={submitAction} className="flex flex-col gap-2">
       <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor='name'>Name</label>
-      <input type="text" name="name" disabled={isPending} className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
-      <button type="submit" disabled={isPending} className={`font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${isPending ? 'bg-gray-500 text-gray-300 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-700 text-white'}`}>Submit</button>
+      <input 
+        type="text" 
+        name="name" 
+        disabled={isPending} 
+        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+      <button 
+        type="submit" 
+        disabled={isPending} 
+        className={`font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline 
+          ${isPending ? 
+          'bg-gray-500 text-gray-300 cursor-not-allowed' : 
+          'bg-blue-500 hover:bg-blue-700 text-white'}`}>
+            Submit
+      </button>
       {error && <span className="text-red-500">Failed: {error}</span>}
       {resultName && <span className="text-green-500">Success: {resultName}</span>}
     </form>
