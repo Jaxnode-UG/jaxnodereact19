@@ -38,17 +38,17 @@ function Thread({ messages, sendMessage }: ThreadProps) {
   );
 
   return (
-    <>
+    <div className="flex flex-col gap-2">
       {optimisticMessages.map((message) => (
         <div key={message.key}>
           {message.text}
           {!!message.sending && <small> (Sending...)</small>}
         </div>
       ))}
-      <form action={formAction} ref={formRef}>
+      <form action={formAction} ref={formRef} className="flex flex-col gap-2 max-w-xs">
         <input type="text" name="message" placeholder="Hello!" />
-        <button type="submit">Send</button>
+        <button type="submit" className="font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-blue-500 hover:bg-blue-700 text-white">Send</button>
       </form>
-    </>
+    </div>
   );
 }

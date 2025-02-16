@@ -24,7 +24,7 @@ export default function UpdateName() {
   }
   
   return (    
-    <form action={submitAction} className="flex flex-col gap-2">
+    <form action={submitAction} className="flex flex-col gap-2 max-w-xs">
       <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor='name'>Name</label>
       <input 
         type="text" 
