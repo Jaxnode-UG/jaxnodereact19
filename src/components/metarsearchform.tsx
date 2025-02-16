@@ -18,10 +18,10 @@ export default function MetarSearchForm({ wxdata }: MetarSearchFormProps) {
   const [wx, formAction, isPending] = useActionState(getData, wxdata);
   return (
     <div className="">
-      <form action={formAction} className="flex flex-col gap-2">
+      <form action={formAction} className="flex flex-col gap-2 max-w-xs">
         <label htmlFor="station" className="font-bold">Enter Station ID</label>
         <input type="text" id="station" name="station"
-        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
         <button disabled={isPending} className={`font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline 
           ${isPending ? 
           'bg-gray-500 text-gray-300 cursor-not-allowed' : 

@@ -5,7 +5,7 @@ export default function ClassicCounter() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 max-w-xs">
       <button 
         onClick={() => setCount(count + 1)} 
         className="font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-blue-500 hover:bg-blue-700 text-white">
