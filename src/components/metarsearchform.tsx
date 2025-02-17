@@ -4,10 +4,19 @@ import ClientMetar from './clientmetar';
 import { useActionState } from "react";
 
 async function getData(wxdata: Metar, formData: FormData): Promise<Metar> {
-  const icao = formData.get("station")?.valueOf() as string;
-  const res = await fetch(`https://avwx.fekke.com/metar/${icao}`);
-  const data = await res.json() as Metar[];
-  return data[0] as Metar;
+  try {
+    const icao = formData.get("station")?.valueOf() as string;
+    const res = await fetch(`https://avwx.fekke.com/metar/${icao}`);
+    const data = await res.json() as Metar[];
+    if (data.length > 0) {
+      return data[0];
+    } else {
+      return wxdata;
+    }
+  } catch (error) {
+    console.error(error);
+    return wxdata;
+  }
 }
 
 interface MetarSearchFormProps {

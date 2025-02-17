@@ -7,5 +7,7 @@ interface ClientMetarProps {
 }
 
 export default function ClientMetar({ wxdata }: ClientMetarProps) {
-  return (<MetarComponent wxdata={wxdata} />);
+  return (<div className="bg-pink-200 border-1 p-1">
+    <MetarComponent wxdata={wxdata} />
+  </div>);
 }
