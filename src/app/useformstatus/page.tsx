@@ -1,4 +1,5 @@
 import SubmitButton from "../../components/SubmitButton";
+import Link from "next/link";
 
 export default function UseFormStatusPage() {
 
@@ -16,6 +17,7 @@ export default function UseFormStatusPage() {
 
   return (
     <div className="container mx-auto">
+      <Link href="/" className="text-hyperlink">🔙 Back to home</Link>
       <h1 className="text-3xl font-bold">useFormStatus Hook Example</h1>
       <p>
         This example demonstrates how to use the useFormStatus hook to display
