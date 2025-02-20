@@ -1,4 +1,9 @@
+"use server";
+async function wait(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 export async function deliverMessage(message: string): Promise<string> {
-  await new Promise((res) => setTimeout(res, 1000));
+  await wait(1000);
   return message;
 }
